@@ -1,10 +1,8 @@
-using Karami.Core.Common.ClassConsts;
 using Karami.Core.Infrastructure.Extensions;
 using Karami.Core.WebAPI.Extensions;
 using Karami.WebAPI.EntryPoints.Hubs;
 using Karami.WebAPI.Frameworks.Extensions;
 
-using C_SQLContext = Karami.Persistence.Contexts.C.SQLContext;
 using Q_SQLContext = Karami.Persistence.Contexts.Q.SQLContext;
 
 /*-------------------------------------------------------------------*/
@@ -23,7 +21,6 @@ builder.WebHost.ConfigureAppConfiguration((context, builder) => builder.AddJsonF
 
 builder.RegisterHelpers();
 builder.RegisterGrpcServer();
-builder.RegisterCommandSqlServer<C_SQLContext>();
 builder.RegisterQuerySqlServer<Q_SQLContext>();
 builder.RegisterCommandQueryUseCases();
 builder.RegisterCommandRepositories();

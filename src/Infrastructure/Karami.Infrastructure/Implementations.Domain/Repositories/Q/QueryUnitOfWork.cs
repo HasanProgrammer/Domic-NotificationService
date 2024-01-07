@@ -9,6 +9,7 @@ public class QueryUnitOfWork : IQueryUnitOfWork
 {
     private readonly SQLContext   _context;
     private IDbContextTransaction _transaction;
+    
     public QueryUnitOfWork(SQLContext context) => _context = context; //Resource
 
     public void Transaction() => _transaction = _context.Database.BeginTransaction(); //Resource

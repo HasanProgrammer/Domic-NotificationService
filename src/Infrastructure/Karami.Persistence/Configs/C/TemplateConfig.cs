@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Karami.Persistence.Configs.C;
 
-public class TemplateConfig : IEntityTypeConfiguration<Template>
+public class TemplateConfig : IEntityTypeConfiguration<SmsQuery>
 {
-    public void Configure(EntityTypeBuilder<Template> builder)
+    public void Configure(EntityTypeBuilder<SmsQuery> builder)
     {
         //PrimaryKey
         

@@ -13,13 +13,11 @@
 
   <!--CorePackage | Infrastructure-->
   <ItemGroup>
-    <PackageReference Include="Domic.Architecture.Infrastructure" Version="1.2.6"/>
+    <PackageReference Include="Domic.Architecture.Infrastructure" Version="1.2.6" />
   </ItemGroup>
   <!--CorePackage | Infrastructure-->
 
   <!--CoreService | RPC-->
-  <ItemGroup>
-  </ItemGroup>
   <!--CoreService | RPC-->
 
 </Project>

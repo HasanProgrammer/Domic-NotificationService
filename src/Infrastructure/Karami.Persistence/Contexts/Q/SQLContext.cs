@@ -16,7 +16,7 @@ public partial class SQLContext : DbContext
 /*Entity*/
 public partial class SQLContext
 {
-    public DbSet<TemplateQuery> Templates { get; set; }
+    public DbSet<SmsQuery> SMSs { get; set; }
 }
 
 /*Config*/
@@ -26,6 +26,6 @@ public partial class SQLContext
     {
         base.OnModelCreating(builder);
         
-        builder.ApplyConfiguration(new TemplateQueryConfig());
+        builder.ApplyConfiguration(new SmsQueryConfig());
     }
 }

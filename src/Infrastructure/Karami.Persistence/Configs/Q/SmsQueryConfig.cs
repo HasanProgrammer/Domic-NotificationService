@@ -1,19 +1,17 @@
+using Karami.Core.Persistence.Configs;
 using Karami.Domain.Service.Entities;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Karami.Persistence.Configs.Q;
 
-public class TemplateQueryConfig : IEntityTypeConfiguration<TemplateQuery>
+public class SmsQueryConfig : BaseEntityQueryConfig<SmsQuery, string>
 {
-    public void Configure(EntityTypeBuilder<TemplateQuery> builder)
+    public override void Configure(EntityTypeBuilder<SmsQuery> builder)
     {
+        base.Configure(builder);
+        
         //PrimaryKey
-        
-        builder.HasKey(template => template.Id);
 
-        builder.ToTable("Templates");
-        
         /*-----------------------------------------------------------*/
 
         //Property
