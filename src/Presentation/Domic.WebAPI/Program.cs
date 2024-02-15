@@ -31,6 +31,7 @@ builder.RegisterRedisCaching();
 builder.RegisterEventsPublisher();
 builder.RegisterEventsSubscriber();
 builder.RegisterServices();
+builder.RegisterSmsProvider();
 
 builder.Services.AddSignalR();
 builder.Services.AddMvc();

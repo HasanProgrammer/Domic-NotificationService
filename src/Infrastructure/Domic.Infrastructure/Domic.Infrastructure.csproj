@@ -11,9 +11,16 @@
     <ProjectReference Include="..\Domic.Persistence\Domic.Persistence.csproj" />
   </ItemGroup>
 
+  <!--Package-->
+  <ItemGroup>
+    <PackageReference Include="IPE.SmsIr" Version="1.0.5" />
+  </ItemGroup>
+  <!--Package-->
+  
   <!--CorePackage | Infrastructure-->
   <ItemGroup>
     <PackageReference Include="Domic.Architecture.Infrastructure" Version="5.0.0" />
+    <PackageReference Include="IPE.SmsIr" Version="1.0.5" />
   </ItemGroup>
   <!--CorePackage | Infrastructure-->
 

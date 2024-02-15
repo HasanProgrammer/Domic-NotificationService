@@ -15,6 +15,9 @@
   <ItemGroup>
     <PackageReference Include="Domic.Architecture.UseCase" Version="3.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commons\Contracts\Interfaces" />
+  </ItemGroup>
   <!--CorePackage | UseCase-->
 
 </Project>
