@@ -1,8 +1,8 @@
-using Domic.Persistence.Configs.Q;
 using Domic.Domain.Service.Entities;
+using Domic.Persistence.Configs.C;
 using Microsoft.EntityFrameworkCore;
 
-namespace Domic.Persistence.Contexts.Q;
+namespace Domic.Persistence.Contexts.C;
 
 /*Setting*/
 public partial class SQLContext : DbContext
@@ -16,7 +16,7 @@ public partial class SQLContext : DbContext
 /*Entity*/
 public partial class SQLContext
 {
-    public DbSet<SmsQuery> SMSs { get; set; }
+    public DbSet<SmsDelivery> SmsDeliveries { get; set; }
 }
 
 /*Config*/
@@ -26,6 +26,6 @@ public partial class SQLContext
     {
         base.OnModelCreating(builder);
         
-        builder.ApplyConfiguration(new SmsQueryConfig());
+        builder.ApplyConfiguration(new SmsDeliveryConfig());
     }
 }
