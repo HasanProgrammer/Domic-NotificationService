@@ -27,7 +27,7 @@ builder.RegisterCommandRepositories();
 builder.RegisterRedisCaching();
 builder.RegisterMessageBroker();
 builder.RegisterEventsPublisher();
-builder.RegisterEventsSubscriber();
+builder.RegisterMessagesSubscriber();
 builder.RegisterServices();
 builder.RegisterSmsProvider();
 

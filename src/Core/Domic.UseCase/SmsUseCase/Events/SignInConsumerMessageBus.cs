@@ -1,4 +1,5 @@
 ﻿using Domic.Core.Domain.Contracts.Interfaces;
+using Domic.Core.UseCase.Commons.Attributes;
 using Domic.Core.UseCase.Contracts.Interfaces;
 using Domic.Domain.Service.Contracts.Interfaces;
 using Domic.Domain.Service.Entities;
@@ -7,6 +8,7 @@ using Domic.UseCase.SmsUseCase.DTOs;
 
 namespace Domic.UseCase.SmsUseCase.Events;
 
+[Consumer(Queue = "")]
 public class SignInConsumerMessageBus : IConsumerMessageBusHandler<SignInMessage>
 {
     private readonly ISmsProvider _smsProvider;
