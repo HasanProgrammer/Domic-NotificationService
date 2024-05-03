@@ -1,4 +1,6 @@
-﻿using Domic.Core.Domain.Contracts.Interfaces;
+﻿using Domic.Core.Common.ClassConsts;
+using Domic.Core.Domain.Contracts.Interfaces;
+using Domic.Core.UseCase.Attributes;
 using Domic.Core.UseCase.Commons.Attributes;
 using Domic.Core.UseCase.Contracts.Interfaces;
 using Domic.Domain.Service.Contracts.Interfaces;
@@ -27,7 +29,12 @@ public class SignInConsumerMessageBus : IConsumerMessageBusHandler<SignInMessage
         _dateTime = dateTime;
     }
 
+    [TransactionConfig(Type = TransactionType.Command)]
     public void Handle(SignInMessage message)
+    {}
+
+    [TransactionConfig(Type = TransactionType.Command)]
+    public async Task HandleAsync(SignInMessage message, CancellationToken cancellationToken)
     {
         var payload = new SmsIrPayload {
             TemplateId = 10,
@@ -35,7 +42,7 @@ public class SignInConsumerMessageBus : IConsumerMessageBusHandler<SignInMessage
             Parameters = { new("CODE", message.OtpCode) }
         };
 
-        var result = _smsProvider.Send(payload);
+        var result = await _smsProvider.SendAsync(payload, cancellationToken);
         
         _smsDeliveryRepository.Add(
             new SmsDelivery(_globalUniqueIdGenerator, _dateTime, message.PhoneNumber, result.LineNumber, 

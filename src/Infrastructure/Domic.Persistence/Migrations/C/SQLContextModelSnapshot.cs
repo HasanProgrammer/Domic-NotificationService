@@ -22,6 +22,26 @@ namespace Domic.Persistence.Migrations.C
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Domic.Core.Domain.Entities.ConsumerEvent", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt_EnglishDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedAt_PersianDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ConsumerEvents", (string)null);
+                });
+
             modelBuilder.Entity("Domic.Domain.Service.Entities.SmsDelivery", b =>
                 {
                     b.Property<string>("Id")

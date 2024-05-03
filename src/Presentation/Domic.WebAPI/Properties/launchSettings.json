@@ -18,6 +18,7 @@
       "environmentVariables": {
         "SMS_IR_KEY": "",
         "Elastic-Host": "http://localhost:9200",
+        "Elastic-Index": "notification",
         "Elastic-Username": "",
         "Elastic-Password": "",
         "E-RabbitMQ-Host": "localhost",

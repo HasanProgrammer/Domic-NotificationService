@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Domic.Persistence.Migrations.C
 {
     [DbContext(typeof(SQLContext))]
-    [Migration("20240215143923_Init")]
+    [Migration("20240503165201_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,26 @@ namespace Domic.Persistence.Migrations.C
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("Domic.Core.Domain.Entities.ConsumerEvent", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt_EnglishDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedAt_PersianDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ConsumerEvents", (string)null);
+                });
 
             modelBuilder.Entity("Domic.Domain.Service.Entities.SmsDelivery", b =>
                 {

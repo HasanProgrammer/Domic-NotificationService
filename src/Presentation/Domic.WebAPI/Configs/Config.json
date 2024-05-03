@@ -1,4 +1,4 @@
 {
-  "IsExternalBrokerConsumingAsync": false,
+  "IsExternalBrokerConsumingAsync": true,
   "IsInternalBrokerConsumingAsync": false
 }

@@ -1,3 +1,5 @@
+using Domic.Core.Domain.Entities;
+using Domic.Core.Persistence.Configs;
 using Domic.Domain.Service.Entities;
 using Domic.Persistence.Configs.C;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +18,7 @@ public partial class SQLContext : DbContext
 /*Entity*/
 public partial class SQLContext
 {
+    public DbSet<ConsumerEvent> ConsumerEvents { get; set; }
     public DbSet<SmsDelivery> SmsDeliveries { get; set; }
 }
 
@@ -26,6 +29,7 @@ public partial class SQLContext
     {
         base.OnModelCreating(builder);
         
+        builder.ApplyConfiguration(new ConsumerEventConfig());
         builder.ApplyConfiguration(new SmsDeliveryConfig());
     }
 }
