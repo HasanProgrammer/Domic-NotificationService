@@ -27,7 +27,8 @@ services:
       - I-RabbitMQ-Port=
       - I-RabbitMQ-Username=
       - I-RabbitMQ-Password=
-      - RedisConnectionString=
+      - E-RedisConnectionString=
+      - I-RedisConnectionString=
       - MongoConnectionString=
       - C-SqlServerConnectionString=Server=domic.notification.command.sql.server,1433;Database=NotificationService;User ID=sa;Password=Hasan313@@313!!;Persist Security Info=True;MultipleActiveResultSets=True;
       - Q-SqlServerConnectionString=Server=domic.notification.query.sql.server,1433;Database=NotificationService;User ID=sa;Password=Hasan313@@313!!;Persist Security Info=True;MultipleActiveResultSets=True;
