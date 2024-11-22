@@ -10,13 +10,12 @@ public class SmsDelivery : Entity<string>
 {
     //Value Objects | Properties
     
-    public string PhoneNumber { get; set; }
-    public long LineNumber { get; set; }
-    public int MessageId { get; }
-    public string MessageContent { get; set; }
-    public DateTime SendDateTime { get; set; }
-    public byte? DeliveryStatus { get; set; }
-    public DateTime? DeliveryDateTime { get; set; }
+    public string PhoneNumber { get; private set; }
+    public long LineNumber { get; private set; }
+    public string MessageContent { get; private set; }
+    public DateTime SendDateTime { get; private set; }
+    public byte? DeliveryStatus { get; private set; }
+    public DateTime? DeliveryDateTime { get; private set; }
 
     /*---------------------------------------------------------------*/
     
@@ -47,7 +46,6 @@ public class SmsDelivery : Entity<string>
         Id = globalUniqueIdGenerator.GetRandom(6);
         PhoneNumber = phoneNumber;
         LineNumber = lineNumber;
-        MessageId = messageId;
         MessageContent = messageContent;
         DeliveryStatus = deliveryStatus;
         CreatedAt = new CreatedAt(nowDateTime, nowPersianDateTime);
