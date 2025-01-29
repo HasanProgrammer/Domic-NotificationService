@@ -28,7 +28,7 @@ builder.RegisterDistributedCaching();
 builder.RegisterMessageBroker();
 builder.RegisterEventStreamBroker();
 builder.RegisterEventsPublisher();
-builder.RegisterMessagesSubscriber();
+builder.RegisterEventsSubscriber();
 builder.RegisterServices();
 builder.RegisterSmsProvider();
 
