@@ -34,6 +34,7 @@ builder.RegisterSmsProvider();
 
 builder.Services.AddSignalR();
 builder.Services.AddMvc();
+builder.Services.AddHttpContextAccessor();
 
 #endregion
 
