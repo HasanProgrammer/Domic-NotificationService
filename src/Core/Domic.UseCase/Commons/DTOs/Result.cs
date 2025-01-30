@@ -2,10 +2,18 @@
 
 public sealed class Result
 {
+    public byte Status { get; set; }
+    public string Message { get; set; }
+    public Data Data { get; set; }
+}
+
+public sealed class Data
+{
     public long LineNumber { get; set; }
     public int MessageId { get; set; }
-    public string MessageContent { get; set; }
-    public DateTime SendDateTime { get; set; }
+    public string MessageText { get; set; }
+    public long SendDateTime { get; set; }
     public byte? DeliveryStatus { get; set; }
-    public DateTime? DeliveryDateTime { get; set; }
+    public double Cost { get; set; }
+    public long? DeliveryDateTime { get; set; }
 }

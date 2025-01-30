@@ -23,6 +23,7 @@ public class SmsDeliveryConfig : BaseEntityConfig<SmsDelivery, string>
         builder.Property(delivery => delivery.MessageContent).IsRequired().HasMaxLength(150);
         builder.Property(delivery => delivery.SendDateTime).IsRequired();
         builder.Property(delivery => delivery.DeliveryStatus).IsRequired(false);
+        builder.Property(delivery => delivery.DeliveryMessage).IsRequired();
         builder.Property(delivery => delivery.DeliveryDateTime).IsRequired(false);
     }
 }

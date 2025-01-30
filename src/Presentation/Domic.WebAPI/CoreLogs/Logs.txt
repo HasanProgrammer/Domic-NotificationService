@@ -1255,3 +1255,28 @@ Error Number:207,State:1,Class:16
    at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Domic\Domic-NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 37
    at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
 
+
+ Date: 1403/11/11 | Message: قالب یافت نشد | Source: IPE.SmsIrClient.Exceptions.LogicalException: قالب یافت نشد
+   at IPE.SmsIrClient.Extensions.HttpRequestExtensions.HandleUnsuccessfulResponse(HttpResponseMessage response)
+   at IPE.SmsIrClient.Extensions.HttpRequestExtensions.PostRequestAsync[TResult](HttpClient httpClient, String requestUri, Object data)
+   at IPE.SmsIrClient.SmsIr.VerifySendAsync(String mobile, Int32 templateId, VerifySendParameter[] parameters)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Domic\Domic-NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 48
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Domic\Domic-NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 43
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1403/11/11 | Message: String '1738214235' was not recognized as a valid DateTime. | Source: System.FormatException: String '1738214235' was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Domic\Domic-NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 53
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Domic\Domic-NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 43
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1403/11/11 | Message: String '1738214307' was not recognized as a valid DateTime. | Source: System.FormatException: String '1738214307' was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Domic\Domic-NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 53
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Domic\Domic-NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 43
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+

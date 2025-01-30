@@ -16,6 +16,7 @@ public class SmsDelivery : Entity<string>
     public string MessageContent { get; set; }
     public DateTime SendDateTime { get; set; }
     public byte? DeliveryStatus { get; set; }
+    public string DeliveryMessage { get; set; }
     public DateTime? DeliveryDateTime { get; set; }
 
     /*---------------------------------------------------------------*/
@@ -37,8 +38,14 @@ public class SmsDelivery : Entity<string>
     /// <param name="messageId"></param>
     /// <param name="messageContent"></param>
     /// <param name="deliveryStatus"></param>
+    /// <param name="deliveryMessage"></param>
+    /// <param name="sendDateTime"></param>
+    /// <param name="deliveryDateTime"></param>
+    /// <param name="createdBy"></param>
+    /// <param name="createRole"></param>
     public SmsDelivery(IGlobalUniqueIdGenerator globalUniqueIdGenerator, IDateTime dateTime, 
-        string phoneNumber, long lineNumber, int messageId, string messageContent, byte? deliveryStatus
+        string phoneNumber, long lineNumber, int messageId, string messageContent, byte? deliveryStatus,
+        string deliveryMessage, long sendDateTime, long? deliveryDateTime, string createdBy, string createRole
     )
     {
         var nowDateTime = DateTime.Now;
@@ -50,7 +57,14 @@ public class SmsDelivery : Entity<string>
         MessageId = messageId;
         MessageContent = messageContent;
         DeliveryStatus = deliveryStatus;
-        CreatedAt = new CreatedAt(nowDateTime, nowPersianDateTime);
+        DeliveryMessage = deliveryMessage;
+        SendDateTime = DateTime.FromBinary(sendDateTime);
+        DeliveryDateTime = deliveryDateTime is not null ? DateTime.FromBinary(deliveryDateTime.Value) : default;
+        
+        //audit
+        CreatedBy   = createdBy;
+        CreatedRole = createRole;
+        CreatedAt   = new CreatedAt(nowDateTime, nowPersianDateTime);
     }
 
     /*---------------------------------------------------------------*/

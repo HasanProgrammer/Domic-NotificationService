@@ -2,5 +2,6 @@
 
 public class Payload
 {
-    public string Mobile { get; set; }
+    public string MessageContent { get; set; }
+    public string PhoneNumber { get; set; }
 }

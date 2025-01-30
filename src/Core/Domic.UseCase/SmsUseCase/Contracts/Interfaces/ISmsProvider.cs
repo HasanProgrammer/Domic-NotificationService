@@ -9,15 +9,7 @@ public interface ISmsProvider
     /// 
     /// </summary>
     /// <param name="payload"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
-    public Result Send(Payload payload) => throw new NotImplementedException();
-    
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="payload"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public Task<Result> SendAsync(Payload payload, CancellationToken cancellationToken);
+    public Task<Result> SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken);
 }

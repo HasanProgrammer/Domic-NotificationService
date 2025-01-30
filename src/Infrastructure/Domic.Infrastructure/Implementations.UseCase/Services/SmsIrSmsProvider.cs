@@ -1,64 +1,63 @@
-﻿using Domic.UseCase.Commons.DTOs;
+﻿using System.Net.Http.Json;
+using System.Text;
+using Domic.Core.Infrastructure.Extensions;
+using Domic.UseCase.Commons.DTOs;
 using Domic.UseCase.SmsUseCase.Contracts.Interfaces;
-using Domic.UseCase.SmsUseCase.DTOs;
-using IPE.SmsIrClient.Models.Requests;
 
 namespace Domic.Infrastructure.Implementations.UseCase.Services.SmsIr;
 
 public class SmsIrSmsProvider : ISmsProvider
 {
-    private readonly IPE.SmsIrClient.SmsIr _smsIr;
-
-    public SmsIrSmsProvider() => _smsIr = new IPE.SmsIrClient.SmsIr(Environment.GetEnvironmentVariable("SMS_IR_KEY"));
-
-    public Result Send(Payload payload)
+    public async Task<Result> SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken)
     {
-        var smsIrPayload = payload as SmsIrPayload;
-
-        List<VerifySendParameter> parameters = new();
-
-        foreach (var (key, value) in smsIrPayload.Parameters)
-            parameters.Add(new VerifySendParameter(key, value));
-
-        var response = _smsIr.VerifySend(smsIrPayload.Mobile, smsIrPayload.TemplateId, parameters.ToArray());
-
-        var responseOfDeliveryInfo = _smsIr.GetReport(response.Data.MessageId).Data;
-
-        return new() {
-            LineNumber = responseOfDeliveryInfo.LineNumber,
-            MessageId = responseOfDeliveryInfo.MessageId,
-            MessageContent = responseOfDeliveryInfo.MessageText,
-            SendDateTime = DateTime.Parse(responseOfDeliveryInfo.SendDateTime.ToString()),
-            DeliveryStatus = responseOfDeliveryInfo.DeliveryState,
-            DeliveryDateTime = responseOfDeliveryInfo.DeliveryDateTime is not null 
-                ? DateTime.Parse(responseOfDeliveryInfo.DeliveryDateTime.ToString())
-                : default
+        using var httpClient = new HttpClient();
+        
+        httpClient.DefaultRequestHeaders.Add("x-api-key", Environment.GetEnvironmentVariable("SMS_IR_KEY"));
+        
+        var model = new VerifySendModel {
+            Mobile = payload.PhoneNumber,
+            TemplateId = 123456,
+            Parameters = new[] {
+                new VerifySendParameterModel { Name = "CODE", Value = payload.MessageContent }
+            }
         };
+        
+        StringContent stringContent = new(model.Serialize(), Encoding.UTF8, "application/json");
+
+        var response = await httpClient.PostAsync("https://api.sms.ir/v1/send/verify", stringContent);
+
+        var result = await response.Content.ReadFromJsonAsync<VerifyResponse>(cancellationToken);
+        
+        var responseReport = await httpClient.GetAsync($"https://api.sms.ir/v1/send/{result.Data.MessageId}");
+        
+        return await responseReport.Content.ReadFromJsonAsync<Result>();
     }
+}
 
-    public async Task<Result> SendAsync(Payload payload, CancellationToken cancellationToken)
-    {
-        var smsIrPayload = payload as SmsIrPayload;
+public class VerifySendParameterModel
+{
+    public string Name { get; set; }
+    public string Value { get; set; }
+}
 
-        List<VerifySendParameter> parameters = new();
+public class VerifySendModel
+{
+    public string Mobile { get; set; }
 
-        foreach (var (key, value) in smsIrPayload.Parameters)
-            parameters.Add(new VerifySendParameter(key, value));
+    public int TemplateId { get; set; }
 
-        var response =
-            await _smsIr.VerifySendAsync(smsIrPayload.Mobile, smsIrPayload.TemplateId, parameters.ToArray());
+    public VerifySendParameterModel[] Parameters { get; set; }
+}
 
-        var responseOfDeliveryInfo = ( await _smsIr.GetReportAsync(response.Data.MessageId) ).Data;
+public class VerifyResponse
+{
+    public int Status { get; set; } 
+    public string Message { get; set; }
+    public VerifyResponseData Data { get; set; }
+}
 
-        return new() {
-            LineNumber = responseOfDeliveryInfo.LineNumber,
-            MessageId = responseOfDeliveryInfo.MessageId,
-            MessageContent = responseOfDeliveryInfo.MessageText,
-            SendDateTime = DateTime.Parse(responseOfDeliveryInfo.SendDateTime.ToString()),
-            DeliveryStatus = responseOfDeliveryInfo.DeliveryState,
-            DeliveryDateTime = responseOfDeliveryInfo.DeliveryDateTime is not null 
-                ? DateTime.Parse(responseOfDeliveryInfo.DeliveryDateTime.ToString())
-                : default
-        };
-    }
+public class VerifyResponseData
+{
+    public double Cost { get; set; }
+    public int MessageId { get; set; }
 }
