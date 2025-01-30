@@ -1250,3 +1250,8 @@ Error Number:207,State:1,Class:16
 ClientConnectionId:434800c9-8574-46a0-a606-6071db19b6c9
 Error Number:207,State:1,Class:16 
 
+
+ Date: 1403/11/11 | Message: Object reference not set to an instance of an object. | Source: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Domic\Domic-NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 37
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+

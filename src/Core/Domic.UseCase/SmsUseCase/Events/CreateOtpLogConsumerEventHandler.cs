@@ -34,10 +34,10 @@ public class CreateOtpLogConsumerEventHandler : IConsumerEventBusHandler<OtpLogC
     [TransactionConfig(Type = TransactionType.Command)]
     public async Task HandleAsync(OtpLogCreated @event, CancellationToken cancellationToken)
     {
-        var payload = new SmsIrPayload {
-            TemplateId = 10,
-            Mobile = @event.PhoneNumber,
-            Parameters = { new("CODE", @event.MessageContent) }
+        var payload = new SmsIrPayload { TemplateId = 10, Mobile = @event.PhoneNumber };
+
+        payload.Parameters = new Dictionary<string, string> {
+            {"CODE", @event.MessageContent}
         };
 
         var result = await _smsProvider.SendAsync(payload, cancellationToken);
