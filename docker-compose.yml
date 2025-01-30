@@ -34,7 +34,7 @@ services:
       - MongoConnectionString=
       - C-SqlServerConnectionString=Server=domic.notification.command.sql.server,1433;Database=NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;
       - Q-SqlServerConnectionString=
-      - SMS_IR_KEY=
+      - SMS_IR_KEY=iaVsJlROcMPS0mrAEpL6woDctCB67OJlGuECBwxCFcue16BVXr4KHgHqk5GefppA
       - Host=domic.notification.api
       - Port=443
       - ASPNETCORE_ENVIRONMENT=Production
