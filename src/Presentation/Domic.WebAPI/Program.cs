@@ -46,8 +46,7 @@ WebApplication application = builder.Build();
 
 //Primary processing
 
-//application.Services.AutoMigration<C_SQLContext>();
-//application.Services.AutoMigration<Q_SQLContext>();
+application.Services.AutoMigration<SQLContext>();
 
 /*-------------------------------------------------------------------*/
 
