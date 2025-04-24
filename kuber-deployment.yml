@@ -1,0 +1,112 @@
+apiVersion: apps/v1
+kine: Deployment
+metadata:
+	name: notification-deployment
+spec:
+  replicas: 3
+	selector:
+		matchLabels:
+      app: notification-pod
+  template:
+    metadata:
+      labels:
+        app: notification-pod
+    spec:
+      containers:
+        - name: notification-container
+          image: notification:1.0.0
+          volumeMounts:
+            - name: log
+              mountPath: /CoreLogs
+          ports:
+            - containerPort: 80
+          env:
+            # Global
+            - name: ASPNETCORE_ENVIRONMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: ASPNETCORE_ENVIRONMENT
+            - name: ASPNETCORE_URLS
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: ASPNETCORE_URLS
+            - name: ASPNETCORE_Kestrel__Certificates__Default__Password
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: ASPNETCORE_Kestrel__Certificates__Default__Password
+            - name: ASPNETCORE_Kestrel__Certificates__Default__Path
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: ASPNETCORE_Kestrel__Certificates__Default__Path
+            # Elastic
+            - name: Elastic-Host
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: Elastic-Host
+            - name: Elastic-Username
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: Elastic-Username
+            - name: Elastic-Password
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: Elastic-Password
+            - name: Elastic-Index
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: Notification-Elastic-Index
+            # RabbitMQ
+            - name: E-RabbitMQ-Host
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: E-RabbitMQ-Host
+            - name: E-RabbitMQ-Port
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: E-RabbitMQ-Port
+            - name: E-RabbitMQ-Username
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: E-RabbitMQ-Username
+            - name: E-RabbitMQ-Password
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: E-RabbitMQ-Password
+            # Redis
+            - name: I-RedisConnectionString
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: Notification-RedisConnectionString
+            # SqlServer
+            - name: C-SqlServerConnectionString
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: Notification-SqlServerConnectionString
+            # Core
+            - name: Host
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: Notification-Host
+            - name: Port
+              valueFrom:
+                configMapKeyRef:
+                  name: global-config-map
+                  key: Notification-Port
+      volumes:
+        - name: log
+          emptyDir: {}
