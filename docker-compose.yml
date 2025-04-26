@@ -18,7 +18,7 @@ services:
       - ~\.aspnet\https\:/https/
     environment:
       - Elastic-Host=http://domic.elastic.search:9200
-      - Elastic-Index=ticket
+      - Elastic-Index=notification
       - Elastic-Username=domic
       - Elastic-Password=Domic123!@#
       - E-RabbitMQ-Host=domic.rabbit.mq
@@ -63,7 +63,7 @@ services:
     container_name: 'notification_redis'
     command: 'redis-server'
     ports:
-      - 6380:6379
+      - 5380:6379
 
 volumes:
   log:
