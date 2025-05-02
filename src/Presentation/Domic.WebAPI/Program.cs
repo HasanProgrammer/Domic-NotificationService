@@ -31,6 +31,7 @@ builder.RegisterEventsPublisher();
 builder.RegisterEventsSubscriber();
 builder.RegisterServices();
 builder.RegisterSmsProvider();
+builder.RegisterAssemblyTypesInMemory();
 
 builder.Services.AddSignalR();
 builder.Services.AddMvc();
