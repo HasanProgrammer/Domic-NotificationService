@@ -1,0 +1,760 @@
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
+
+ Date: 1404/03/17 | Message: The SSL connection could not be established, see inner exception. | Source: System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Domic.Infrastructure.Implementations.UseCase.Services.SmsIr.SmsIrSmsProvider.SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Infrastructure\Domic.Infrastructure\Implementations.UseCase\Services\SmsIrSmsProvider.cs:line 27
+   at Domic.UseCase.SmsUseCase.Events.CreateOtpLogConsumerEventHandler.HandleAsync(OtpLogCreated event, CancellationToken cancellationToken) in D:\Programming\Hasan Company\Programming ASP\DotrisCompany\NotificationService\src\Core\Domic.UseCase\SmsUseCase\Events\CreateOtpLogConsumerEventHandler.cs:line 39
+   at Domic.Core.Infrastructure.Concretes.ExternalMessageBroker._EventOfQueueHandleAsync(IModel channel, BasicDeliverEventArgs args, Event event, IServiceProvider serviceProvider, CancellationToken cancellationToken) 
+
