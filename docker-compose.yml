@@ -43,29 +43,29 @@ services:
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - ASPNETCORE_Kestrel__Certificates__Default__Password=Domic123!@#
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/Domic.WebAPI.pfx
-    depends_on:
+#    depends_on:
 #      - domic.notification.command.sql.server
 #      - domic.notification.redis
   
-  domic.notification.command.sql.server:
-    networks:
-      - domic
-    image: 'mcr.microsoft.com/mssql/server'
-    container_name: "notification_command_sql_server"
-    ports:
-      - 1533:1433
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=Domic123!@#
-
-  domic.notification.redis:
-    networks:
-      - domic
-    image: 'redis'
-    container_name: 'notification_redis'
-    command: 'redis-server'
-    ports:
-      - 6380:6379
+#  domic.notification.command.sql.server:
+#    networks:
+#      - domic
+#    image: 'mcr.microsoft.com/mssql/server'
+#    container_name: "notification_command_sql_server"
+#    ports:
+#      - 1533:1433
+#    environment:
+#      - ACCEPT_EULA=Y
+#      - SA_PASSWORD=Domic123!@#
+#
+#  domic.notification.redis:
+#    networks:
+#      - domic
+#    image: 'redis'
+#    container_name: 'notification_redis'
+#    command: 'redis-server'
+#    ports:
+#      - 6380:6379
 
 volumes:
   log:
