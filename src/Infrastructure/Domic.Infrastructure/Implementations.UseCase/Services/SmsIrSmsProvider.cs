@@ -14,6 +14,8 @@ public class SmsIrSmsProvider(ILogger logger, IConfiguration configuration) : IS
 {
     public async Task<Result> SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken)
     {
+        logger.RecordAsync(Guid.NewGuid().ToString(), "NotificationService", $"sms key: {Environment.GetEnvironmentVariable("SMS_IR_KEY")}", cancellationToken);
+        
         using var httpClient = new HttpClient();
         
         httpClient.DefaultRequestHeaders.Add("x-api-key", Environment.GetEnvironmentVariable("SMS_IR_KEY"));
@@ -31,9 +33,8 @@ public class SmsIrSmsProvider(ILogger logger, IConfiguration configuration) : IS
         var response = await httpClient.PostAsync("https://api.sms.ir/v1/send/verify", stringContent);
 
         var result = await response.Content.ReadFromJsonAsync<VerifyResponse>(cancellationToken);
-
+        
         logger.RecordAsync(Guid.NewGuid().ToString(), "NotificationService", $"result of send sms: {result.Serialize()}", cancellationToken);
-        logger.RecordAsync(Guid.NewGuid().ToString(), "NotificationService", $"sms key: {Environment.GetEnvironmentVariable("SMS_IR_KEY")}", cancellationToken);
         
         var responseReport = await httpClient.GetAsync($"https://api.sms.ir/v1/send/{result.Data.MessageId}");
         
