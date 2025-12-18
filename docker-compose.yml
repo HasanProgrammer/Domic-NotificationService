@@ -2,11 +2,13 @@ name: 'notification_service'
 
 services:
   
-  domic.notification.api:
+  domic.notification.service:
     networks:
       - domic
-    image: notification_service_api_image:1.0.0
-    container_name: "notification_service_api"
+    image: domic_notification_service_image:1.0.0
+    container_name: "domic_notification_service"
+    env_file:
+      - ~/services/Configs/Domic-NotificationService/.env
     build:
       context: .
       dockerfile: Dockerfile
@@ -14,9 +16,8 @@ services:
     ports:
       - "1120-1140:443"
     volumes:
-      - log:/app/CoreLogs
+      - ~/services/Logs/Domic-NotificationService/:/app/CoreLogs/
       - ~/services/Domic-NotificationService/.https/:/https/
-#     - C:\https\:/https/
     environment:
       - Elastic-Host=http://domic.elastic.search:9200
       - Elastic-Index=ticket
@@ -37,8 +38,8 @@ services:
       - C-SqlServerConnectionString=Server=domic.sql.server,1433;Database=NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;
 #     - C-SqlServerConnectionString=Server=domic.notification.command.sql.server,1433;Database=NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;
       - Q-SqlServerConnectionString=
-      - SMS_IR_KEY=iaVsJlROcMPS0mrAEpL6woDctCB67OJlGuECBwxCFcue16BVXr4KHgHqk5GefppA
-      - Host=domic.notification.api
+      - SMS_IR_KEY=${SMS_IR_KEY}
+      - Host=domic.notification.service
       - Port=443
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=https://+:443;http://+:80
@@ -53,7 +54,7 @@ services:
 #   networks:
 #     - domic
 #   image: 'mcr.microsoft.com/mssql/server'
-#   container_name: "notification_command_sql_server"
+#   container_name: "domic_notification_command_sql_server"
 #   ports:
 #     - 1533:1433
 #   environment:
@@ -64,7 +65,7 @@ services:
 #   networks:
 #     - domic
 #   image: 'redis'
-#   container_name: 'notification_redis'
+#   container_name: 'domic_notification_redis'
 #   command: 'redis-server'
 #   ports:
 #     - 6380:6379
