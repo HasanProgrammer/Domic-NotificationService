@@ -1,12 +1,16 @@
-﻿using System.Net.Http.Json;
+﻿#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
+
+using System.Net.Http.Json;
 using System.Text;
 using Domic.Core.Infrastructure.Extensions;
+using Domic.Core.UseCase.Contracts.Interfaces;
 using Domic.UseCase.Commons.DTOs;
 using Domic.UseCase.SmsUseCase.Contracts.Interfaces;
+using Microsoft.Extensions.Configuration;
 
 namespace Domic.Infrastructure.Implementations.UseCase.Services.SmsIr;
 
-public class SmsIrSmsProvider : ISmsProvider
+public class SmsIrSmsProvider(ILogger logger, IConfiguration configuration) : ISmsProvider
 {
     public async Task<Result> SendOtpCodeAsync(Payload payload, CancellationToken cancellationToken)
     {
@@ -27,6 +31,9 @@ public class SmsIrSmsProvider : ISmsProvider
         var response = await httpClient.PostAsync("https://api.sms.ir/v1/send/verify", stringContent);
 
         var result = await response.Content.ReadFromJsonAsync<VerifyResponse>(cancellationToken);
+
+        logger.RecordAsync(Guid.NewGuid().ToString(), "NotificationService", $"result of send sms: {result.Serialize()}", cancellationToken);
+        logger.RecordAsync(Guid.NewGuid().ToString(), "NotificationService", $"sms key: {Environment.GetEnvironmentVariable("SMS_IR_KEY")}", cancellationToken);
         
         var responseReport = await httpClient.GetAsync($"https://api.sms.ir/v1/send/{result.Data.MessageId}");
         
