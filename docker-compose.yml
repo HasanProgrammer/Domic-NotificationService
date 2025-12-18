@@ -69,9 +69,6 @@ services:
 #   command: 'redis-server'
 #   ports:
 #     - 6380:6379
-
-volumes:
-  log:
     
 networks:
   domic:
