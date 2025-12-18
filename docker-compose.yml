@@ -8,7 +8,7 @@ services:
     image: domic_notification_service_image:1.0.0
     container_name: "domic_notification_service"
     env_file:
-      - ~/services/Configs/Domic-NotificationService/.env
+      - /services/Configs/Domic-NotificationService/.env
     build:
       context: .
       dockerfile: Dockerfile
@@ -35,8 +35,8 @@ services:
       - I-RedisConnectionString=domic.redis:6379
 #     - I-RedisConnectionString=domic.notification.redis:6379
       - MongoConnectionString=
-      - C-SqlServerConnectionString=Server=domic.sql.server,1433;Database=NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;
-#     - C-SqlServerConnectionString=Server=domic.notification.command.sql.server,1433;Database=NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;
+      - C-SqlServerConnectionString=Server=domic.sql.server,1433;Database=NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;TrustServerCertificate=True;
+#     - C-SqlServerConnectionString=Server=domic.notification.command.sql.server,1433;Database=NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;TrustServerCertificate=True;
       - Q-SqlServerConnectionString=
       - SMS_IR_KEY=${SMS_IR_KEY}
       - Host=domic.notification.service
