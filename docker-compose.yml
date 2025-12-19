@@ -7,8 +7,6 @@ services:
       - domic
     image: domic_notification_service_image:1.0.0
     container_name: "domic_notification_service"
-    env_file:
-      - /root/services/Configs/Domic-NotificationService/.env
     build:
       context: .
       dockerfile: Dockerfile
