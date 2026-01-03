@@ -3,7 +3,6 @@
 using Domic.Core.Domain.Contracts.Abstracts;
 using Domic.Core.Domain.Contracts.Interfaces;
 using Domic.Core.Domain.ValueObjects;
-using Domic.Domain.Email.Events;
 
 namespace Domic.Domain.Email.Entities;
 
@@ -28,13 +27,12 @@ public class EmailDelivery : Entity<string>
     /// </summary>
     /// <param name="globalUniqueIdGenerator"></param>
     /// <param name="dateTime"></param>
-    /// <param name="identityUser"></param>
     /// <param name="address"></param>
     /// <param name="messageContent"></param>
-    /// <param name="sendDateTime"></param>
+    /// <param name="createdBy"></param>
+    /// <param name="createdRole"></param>
     public EmailDelivery(IGlobalUniqueIdGenerator globalUniqueIdGenerator, IDateTime dateTime, 
-        IIdentityUser identityUser, ISerializer serializer, string address, string messageContent,
-        string verifyCode
+        string address, string messageContent, string createdBy, string createdRole
     )
     {
         var nowDateTime = DateTime.Now;
@@ -45,21 +43,9 @@ public class EmailDelivery : Entity<string>
         MessageContent = messageContent;
         
         //audit
-        CreatedBy   = identityUser.GetIdentity();
-        CreatedRole = serializer.Serialize(identityUser.GetRoles());
+        CreatedBy   = createdBy;
+        CreatedRole = createdRole;
         CreatedAt   = new CreatedAt(nowDateTime, nowPersianDateTime);
-        
-        AddEvent(
-            new EmailVerifyCodeSended {
-                Id = Id,
-                EmailAddress = address,
-                VerifyCode = verifyCode,
-                CreatedBy = CreatedBy,
-                CreatedRole = CreatedRole,
-                CreatedAt_EnglishDate = nowDateTime,
-                CreatedAt_PersianDate = nowPersianDateTime
-            }
-        );
     }
 
     /*---------------------------------------------------------------*/

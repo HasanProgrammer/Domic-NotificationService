@@ -3,5 +3,5 @@
 public class EmailPayload
 {
     public string MessageContent { get; set; }
-    public string MailAddress { get; set; }
+    public string EmailAddress { get; set; }
 }

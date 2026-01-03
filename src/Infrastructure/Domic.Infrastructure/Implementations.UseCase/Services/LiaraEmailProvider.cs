@@ -20,7 +20,7 @@ public class LiaraEmailProvider : IEmailProvider
         var messageContent = string.Format("آکادمی داتریس؛ \n کد اعتبارسنجی پست الکترونیکی شما : {0}", payload.MessageContent);
         
         email.From.Add(MailboxAddress.Parse(mailFromAddress));
-        email.To.Add(MailboxAddress.Parse(payload.MailAddress));
+        email.To.Add(MailboxAddress.Parse(payload.EmailAddress));
         email.Subject = "Verify Code";
         email.Body = new TextPart("plain") { Text = messageContent };
 

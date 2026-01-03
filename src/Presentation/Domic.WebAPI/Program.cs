@@ -1,7 +1,6 @@
 using Domic.Core.Infrastructure.Extensions;
 using Domic.Core.WebAPI.Extensions;
 using Domic.Persistence.Contexts.C;
-using Domic.WebAPI.EntryPoints.GRPCs;
 using Domic.WebAPI.EntryPoints.Hubs;
 using Domic.WebAPI.Frameworks.Extensions;
 
@@ -21,7 +20,6 @@ builder.WebHost.ConfigureAppConfiguration((context, builder) => builder.AddJsonF
 
 builder.RegisterHelpers();
 builder.RegisterELK();
-builder.RegisterGrpcServer();
 builder.RegisterEntityFrameworkCoreCommand<SQLContext, string>();
 builder.RegisterCommandQueryUseCases();
 builder.RegisterCommandRepositories();
@@ -69,8 +67,6 @@ application.UseEndpoints(endpoints => {
     endpoints.HealthCheck(application.Services);
     
     #region GRPC's Services
-
-    endpoints.MapGrpcService<NotificationRpcController>();
 
     #endregion
     

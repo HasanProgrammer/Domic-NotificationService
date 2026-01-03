@@ -1,11 +1,10 @@
 ﻿using Domic.Core.Domain.Attributes;
 using Domic.Core.Domain.Contracts.Abstracts;
-using Domic.Core.Domain.Enumerations;
 
 namespace Domic.Domain.Email.Events;
 
-[EventConfig(ExchangeType = Exchange.FanOut, Exchange = "Notification_EmailDelivery_Exchange")]
-public class EmailVerifyCodeSended : CreateDomainEvent<string>
+[EventConfig(Queue = "Notification_EmailDelivery_Queue")]
+public class EmailVerifyCodeCreated : CreateDomainEvent<string>
 {
     public string EmailAddress { get; set; }
     public string VerifyCode { get; set; }
