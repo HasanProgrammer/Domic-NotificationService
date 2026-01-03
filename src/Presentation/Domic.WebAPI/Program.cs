@@ -1,6 +1,7 @@
 using Domic.Core.Infrastructure.Extensions;
 using Domic.Core.WebAPI.Extensions;
 using Domic.Persistence.Contexts.C;
+using Domic.WebAPI.EntryPoints.GRPCs;
 using Domic.WebAPI.EntryPoints.Hubs;
 using Domic.WebAPI.Frameworks.Extensions;
 
@@ -68,6 +69,8 @@ application.UseEndpoints(endpoints => {
     endpoints.HealthCheck(application.Services);
     
     #region GRPC's Services
+
+    endpoints.MapGrpcService<NotificationRpcController>();
 
     #endregion
     
