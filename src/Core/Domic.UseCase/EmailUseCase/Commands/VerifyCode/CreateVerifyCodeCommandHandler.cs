@@ -27,10 +27,7 @@ public class CreateVerifyCodeCommandHandler(
     {
         var verifyCode = Random.Shared.Next(1000, 9999).ToString();
 
-        var mailPayload = new EmailPayload {
-            MailAddress = command.EmailAddress,
-            MessageContent = verifyCode
-        };
+        var mailPayload = new EmailPayload { MailAddress = command.EmailAddress, MessageContent = verifyCode };
 
         //todo: must be retriable this func!
         var result = await emailProvider.TrySendVerifyCodeAsync(mailPayload, cancellationToken);

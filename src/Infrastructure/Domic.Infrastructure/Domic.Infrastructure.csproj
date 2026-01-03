@@ -25,6 +25,9 @@
   <!--CorePackage | Infrastructure-->
 
   <!--CoreService | RPC-->
+    <ItemGroup>
+        <PackageReference Include="Domic.Grpc.Notification" Version="1.0.0" />
+    </ItemGroup>
   <!--CoreService | RPC-->
 
 </Project>
