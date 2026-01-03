@@ -14,13 +14,13 @@
   <!--Package-->
   <ItemGroup>
     <PackageReference Include="IPE.SmsIr" Version="1.0.5" />
+    <PackageReference Include="MailKit" Version="4.14.1" />
   </ItemGroup>
   <!--Package-->
   
   <!--CorePackage | Infrastructure-->
   <ItemGroup>
     <PackageReference Include="Domic.Architecture.Infrastructure" Version="10.0.5" />
-    <PackageReference Include="IPE.SmsIr" Version="1.0.5" />
   </ItemGroup>
   <!--CorePackage | Infrastructure-->
 

@@ -37,6 +37,11 @@ services:
 #     - C-SqlServerConnectionString=Server=domic.notification.command.sql.server,1433;Database=NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;TrustServerCertificate=True;
       - Q-SqlServerConnectionString=
       - SMS_IR_KEY=${SMS_IR_KEY}
+      - MAIL_HOST=${MAIL_HOST}
+      - MAIL_PORT=${MAIL_PORT}
+      - MAIL_USER=${MAIL_USER}
+      - MAIL_PASSWORD=${MAIL_PASSWORD}
+      - MAIL_FROM_ADDRESS=${MAIL_FROM_ADDRESS}
       - Host=domic.notification.service
       - Port=443
       - ASPNETCORE_ENVIRONMENT=Production

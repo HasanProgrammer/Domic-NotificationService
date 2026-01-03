@@ -29,8 +29,9 @@ builder.RegisterMessageBroker();
 builder.RegisterEventStreamBroker();
 builder.RegisterEventsPublisher();
 builder.RegisterEventsSubscriber();
-builder.RegisterServices();
 builder.RegisterSmsProvider();
+builder.RegisterEmailProvider();
+builder.RegisterServices();
 
 builder.Services.AddSignalR();
 builder.Services.AddMvc();
