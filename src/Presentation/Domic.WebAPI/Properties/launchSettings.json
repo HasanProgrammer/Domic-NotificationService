@@ -40,8 +40,8 @@
         "E-RedisConnectionString": "127.0.0.1:6379",
         "I-RedisConnectionString": "127.0.0.1:6379",
         "MongoConnectionString": "",
-        "C-SqlServerConnectionString": "Server=127.0.0.1,1633;Database=C-NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;",
-        "Q-SqlServerConnectionString": "Server=127.0.0.1,1633;Database=Q-NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;",
+        "C-SqlServerConnectionString": "Server=127.0.0.1,1633;Database=C-NotificationService;User ID=sa;Password=Domic123!@#;Persist Security Info=True;MultipleActiveResultSets=True;TrustServerCertificate=True;",
+        "Q-SqlServerConnectionString": "",
         "Host": "localhost",
         "Port": "5006",
         "ASPNETCORE_ENVIRONMENT": "Development"

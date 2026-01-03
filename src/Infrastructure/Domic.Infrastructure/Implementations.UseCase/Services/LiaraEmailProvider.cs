@@ -27,6 +27,7 @@ public class LiaraEmailProvider : IEmailProvider
         email.Headers.Add("x-liara-tag", "test-tag");
 
         using var client = new SmtpClient();
+        
         await client.ConnectAsync(smtpHost, smtpPort, MailKit.Security.SecureSocketOptions.SslOnConnect);
         await client.AuthenticateAsync(smtpUser, smtpPassword);
         await client.SendAsync(email);
