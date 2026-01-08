@@ -4,7 +4,7 @@ using Domic.Core.UseCase.Attributes;
 using Domic.Core.UseCase.Contracts.Interfaces;
 using Domic.Domain.Service.Contracts.Interfaces;
 using Domic.Domain.Service.Entities;
-using Domic.Domain.User.Events;
+using Domic.Domain.Sms.Events;
 using Domic.UseCase.Commons.DTOs;
 using Domic.UseCase.SmsUseCase.Contracts.Interfaces;
 

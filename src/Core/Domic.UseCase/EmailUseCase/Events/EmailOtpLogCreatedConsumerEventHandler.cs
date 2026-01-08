@@ -15,15 +15,15 @@ public class EmailVerifyCodeCreatedConsumerEventHandler(
     IEmailProvider emailProvider,
     IGlobalUniqueIdGenerator globalUniqueIdGenerator,
     IDateTime dateTime
-) : IConsumerEventBusHandler<EmailVerifyCodeCreated>
+) : IConsumerEventBusHandler<EmailOtpLogCreated>
 {
-    public Task BeforeHandleAsync(EmailVerifyCodeCreated @event, CancellationToken cancellationToken) 
+    public Task BeforeHandleAsync(EmailOtpLogCreated @event, CancellationToken cancellationToken) 
         => Task.CompletedTask;
 
     [TransactionConfig(Type = TransactionType.Command)]
-    public async Task HandleAsync(EmailVerifyCodeCreated @event, CancellationToken cancellationToken)
+    public async Task HandleAsync(EmailOtpLogCreated @event, CancellationToken cancellationToken)
     {
-        var mailPayload = new EmailPayload { EmailAddress = @event.EmailAddress, MessageContent = @event.VerifyCode };
+        var mailPayload = new EmailPayload { EmailAddress = @event.EmailAddress, MessageContent = @event.MessageContent };
         
         var result = await emailProvider.TrySendVerifyCodeAsync(mailPayload, cancellationToken);
 
@@ -34,6 +34,6 @@ public class EmailVerifyCodeCreatedConsumerEventHandler(
         await emailDeliveryCommandRepository.AddAsync(newEmail, cancellationToken);
     }
 
-    public Task AfterHandleAsync(EmailVerifyCodeCreated @event, CancellationToken cancellationToken)
+    public Task AfterHandleAsync(EmailOtpLogCreated @event, CancellationToken cancellationToken)
         => Task.CompletedTask;
 }
