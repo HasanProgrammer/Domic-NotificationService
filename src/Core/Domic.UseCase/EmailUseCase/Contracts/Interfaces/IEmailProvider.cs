@@ -10,5 +10,5 @@ public interface IEmailProvider
     /// <param name="payload"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public Task<string> TrySendVerifyCodeAsync(EmailPayload payload, CancellationToken cancellationToken);
+    public Task<string> SendVerifyCodeAsync(EmailPayload payload, CancellationToken cancellationToken);
 }

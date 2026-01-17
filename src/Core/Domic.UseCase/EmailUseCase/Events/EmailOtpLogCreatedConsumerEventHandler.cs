@@ -25,7 +25,7 @@ public class EmailVerifyCodeCreatedConsumerEventHandler(
     {
         var mailPayload = new EmailPayload { EmailAddress = @event.EmailAddress, MessageContent = @event.MessageContent };
         
-        var result = await emailProvider.TrySendVerifyCodeAsync(mailPayload, cancellationToken);
+        var result = await emailProvider.SendVerifyCodeAsync(mailPayload, cancellationToken);
 
         var newEmail = new EmailDelivery(
             globalUniqueIdGenerator, dateTime, @event.EmailAddress, result, @event.CreatedBy, @event.CreatedRole
